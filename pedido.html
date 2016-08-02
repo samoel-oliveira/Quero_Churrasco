@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title> Pedido </title>
+		<link rel="stylesheet" href="estilo.css">
+		<script type="text/javascript" src="script.js"> </script>
+	</head>
+
+	<body>
+
+		<header>
+
+			<img class="logo"src="queroChurrasco.jpg">
+			<h1> Quero Churrasco </h1>
+			<h3> Delivery </h3>
+
+		</header>
+		
+		<nav>
+
+			<h2><b> <i> <u>Sobre Churrasco:</u> </b> </i> </h2>
+			<h3>  Churrasco é o nome dado ao prato feito a base de carne <i> in natura </i> ou processada, assada sobre fogo ou brasas, 
+			com a utilização de estacas de madeira ou metal (chamados de espetos) ou de grelhas.
+			<br>
+			<br>
+
+			</h3>
+			<h4> Fonte: Wikipédia </h4>
+		</nav>
+
+		<section>
+
+			<div class="tag">
+				<b>
+				<a href= "PaginaInicial.html">    | PÁGINA INCIAL | </a> 
+				<a href= "tabela.html">  TABELA DE PREÇOS    </a>  
+				<a href= "pedido.html">  | REALIZAR PEDIDO |  </a>   
+				</b>
+			</div>
+
+
+			<p>
+			Inicialmente, informe a quantidade de pessoas que irá participar da refeição: 
+			</p>
+			<p>
+			Observação: a quantidade mínima de pessoas é três, caso use quantidade inferior haverá desiquilíbrio na compra do churrasco!
+			</p>
+
+			<form name="dadosPedido" action="pedido.html">
+
+				Quantidade: <input type="number" min="3" max="max" id="quantidade">
+
+					<br>
+
+			
+			<p>
+			Informe a quantidade de gramas desejada, para cada uma das opções abaixo:
+			</p>
+
+			<div align="center">
+				<table border="3">
+
+					<tr>
+
+						<th>
+						TIPO DE CARNE 
+						</th>
+
+						<th>
+						QUANTIDADE EM GRAMA(S)
+						</th>
+
+					</tr>
+
+
+					<tr>
+
+						<td>
+						Linguiça 
+						</td>
+
+						<td>
+						<input type="number" min="0" max="max" step="25" id="linguica"> <br>
+						</td>
+
+					</tr>
+
+
+					<tr>
+
+						<td>
+						Contrafilé 
+						</td>
+
+						<td>
+						<input type="number" min="0" max="max" step="25" id="contrafile"> <br>
+						</td>
+
+					</tr>
+
+
+					<tr>
+
+						<td>
+						Picanha 
+						</td>
+
+						<td>
+						<input type="number" min="0" max="max" step="25" id="picanha"> <br>
+						</td>
+
+					</tr>
+
+
+					<tr>
+
+						<td>
+						Maminha 
+						</td>
+
+						<td>
+						<input type="number" min="0" max="max" step="25" id="maminha"> <br>
+						</td>
+
+					</tr>
+					
+				</table>
+					
+				<br>
+
+					<button type="button" onclick="validaChurras()">
+						Enviar
+					</button>
+
+					<input type="reset" id="limpa" value="Limpar">
+			</div>
+
+				<h4 id="total"> </h4>
+
+				<h4 id="resposta"> </h4>
+
+				<h4 id="alerta"> </h4>
+
+				<h4 id="aviso"> </h4>
+
+				<h4 id="preco"> </h4>
+
+				<h4 id="final"> </h4>
+
+			</form>
+
+		</section>
+
+		<footer>
+
+			<h5>
+				WEBSITE DESENVOLVIDO POR DIOGO KERMES E SAMOEL OLIVEIRA <br> 
+				DISCENTES DO 4º ANO MÉDIO TÉCNICO EM INFORMÁTICA NO IFAL - CAMPUS ARAPIRACA
+			</h5>
+
+		</footer>
+
+	</body>
+
+</html>
