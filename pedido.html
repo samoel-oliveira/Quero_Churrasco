@@ -29,6 +29,7 @@
 
 			</h3>
 			<h4> Fonte: Wikipédia </h4>
+			
 		</nav>
 
 		<section>
@@ -42,14 +43,13 @@
 			</div>
 
 
+			<form name="dadosPedido" action="pedido.html">
+
 			<p>
 			Inicialmente, informe a quantidade de pessoas que irá participar da refeição: 
+			<br>
+			<b>Observação:</b> a quantidade mínima de pessoas é três, caso use quantidade inferior haverá desiquilíbrio na compra do churrasco!
 			</p>
-			<p>
-			Observação: a quantidade mínima de pessoas é três, caso use quantidade inferior haverá desiquilíbrio na compra do churrasco!
-			</p>
-
-			<form name="dadosPedido" action="pedido.html">
 
 				Quantidade: <input type="number" min="3" max="max" id="quantidade">
 
@@ -58,7 +58,7 @@
 			
 			<p>
 			Informe a quantidade de gramas desejada, para cada uma das opções abaixo: <br>
-			Observação: mil gramas são iguais a um kilograma!
+			<b>Observação:</b> mil gramas são iguais a um kilograma!
 			</p>
 
 			<div align="center">
@@ -71,11 +71,11 @@
 						</th>
 
 						<th>
-						QUANTIDADE EM GRAMA(S)
+						QUANTIDADE EM GRAMAS
 						</th>
 
 						<th>
-						VALOR EM REAL($)
+						VALOR EM REAIS
 						</th>
 
 					</tr>
@@ -105,7 +105,11 @@
 						</td>
 
 						<td>
-						<input type="number" min="0" max="max" step="25" id="contrafile"> <br>
+						<input type="number" min="0" max="max" step="25" id="contrafile-gramas"> <br>
+						</td>
+
+						<td>
+						<input type="number" min="0" max="max" step="0.01" id="contrafile-reais"> <br>
 						</td>
 
 					</tr>
@@ -118,7 +122,11 @@
 						</td>
 
 						<td>
-						<input type="number" min="0" max="max" step="25" id="picanha"> <br>
+						<input type="number" min="0" max="max" step="25" id="picanha-gramas"> <br>
+						</td>
+
+						<td>
+						<input type="number" min="0" max="max" step="0.01" id="picanha-reais"> <br>
 						</td>
 
 					</tr>
@@ -131,7 +139,11 @@
 						</td>
 
 						<td>
-						<input type="number" min="0" max="max" step="25" id="maminha"> <br>
+						<input type="number" min="0" max="max" step="25" id="maminha-gramas"> <br>
+						</td>
+
+						<td>
+						<input type="number" min="0" max="max" step="0.01" id="maminha-reais"> <br>
 						</td>
 
 					</tr>
@@ -145,7 +157,9 @@
 					</button>
 
 					<input type="reset" id="limpa" value="Limpar">
-			</div>
+				</div>
+
+			</form>
 
 				<h4 id="total"> </h4>
 
@@ -158,8 +172,6 @@
 				<h4 id="preco"> </h4>
 
 				<h4 id="final"> </h4>
-
-			</form>
 
 		</section>
 
