@@ -6,7 +6,8 @@ function validaChurras() {
 	total = quant*400;
 
 
-	var linguica = parseInt(document.getElementById("linguica").value);
+	var g_linguica = parseInt(document.getElementById("linguica-gramas").value);
+	var r_linguica = parseDouble(document.getElementById("linguica-reais").value);
 	var contrafile = parseInt(document.getElementById("contrafile").value);
 	var picanha = parseInt(document.getElementById("picanha").value);
 	var maminha = parseInt(document.getElementById("maminha").value);

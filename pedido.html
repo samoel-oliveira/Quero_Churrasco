@@ -57,7 +57,8 @@
 
 			
 			<p>
-			Informe a quantidade de gramas desejada, para cada uma das opções abaixo:
+			Informe a quantidade de gramas desejada, para cada uma das opções abaixo: <br>
+			Observação: mil gramas são iguais a um kilograma!
 			</p>
 
 			<div align="center">
@@ -73,6 +74,10 @@
 						QUANTIDADE EM GRAMA(S)
 						</th>
 
+						<th>
+						VALOR EM REAL($)
+						</th>
+
 					</tr>
 
 
@@ -83,7 +88,11 @@
 						</td>
 
 						<td>
-						<input type="number" min="0" max="max" step="25" id="linguica"> <br>
+						<input type="number" min="0" max="max" step="25" id="linguica-gramas"> <br>
+						</td>
+
+						<td>
+						<input type="number" min="0" max="max" step="0.01" id="linguica-reais"> <br>
 						</td>
 
 					</tr>
