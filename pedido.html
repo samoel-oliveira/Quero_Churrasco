@@ -29,7 +29,7 @@
 
 			</h3>
 			<h4> Fonte: Wikipédia </h4>
-			
+
 		</nav>
 
 		<section>
@@ -47,15 +47,13 @@
 
 			<p>
 			Inicialmente, informe a quantidade de pessoas que irá participar da refeição: 
-			<br>
-			<b>Observação:</b> a quantidade mínima de pessoas é três, caso use quantidade inferior haverá desiquilíbrio na compra do churrasco!
 			</p>
 
-				Quantidade: <input type="number" min="3" max="max" id="quantidade">
+				Quantidade: <input type="number" min="1" max="max" id="quantidade">
+				<button type="button" onclick="calcQuantPess()"> Enviar </button>
 
-					<br>
+				<h4 id="resposta"> </h4>
 
-			
 			<p>
 			Informe a quantidade de gramas desejada, para cada uma das opções abaixo: <br>
 			<b>Observação:</b> mil gramas são iguais a um kilograma!
@@ -74,10 +72,6 @@
 						QUANTIDADE EM GRAMAS
 						</th>
 
-						<th>
-						VALOR EM REAIS
-						</th>
-
 					</tr>
 
 
@@ -89,10 +83,6 @@
 
 						<td>
 						<input type="number" min="0" max="max" step="25" id="linguica-gramas"> <br>
-						</td>
-
-						<td>
-						<input type="number" min="0" max="max" step="0.01" id="linguica-reais"> <br>
 						</td>
 
 					</tr>
@@ -108,10 +98,6 @@
 						<input type="number" min="0" max="max" step="25" id="contrafile-gramas"> <br>
 						</td>
 
-						<td>
-						<input type="number" min="0" max="max" step="0.01" id="contrafile-reais"> <br>
-						</td>
-
 					</tr>
 
 
@@ -123,10 +109,6 @@
 
 						<td>
 						<input type="number" min="0" max="max" step="25" id="picanha-gramas"> <br>
-						</td>
-
-						<td>
-						<input type="number" min="0" max="max" step="0.01" id="picanha-reais"> <br>
 						</td>
 
 					</tr>
@@ -142,10 +124,6 @@
 						<input type="number" min="0" max="max" step="25" id="maminha-gramas"> <br>
 						</td>
 
-						<td>
-						<input type="number" min="0" max="max" step="0.01" id="maminha-reais"> <br>
-						</td>
-
 					</tr>
 					
 				</table>
@@ -157,21 +135,14 @@
 					</button>
 
 					<input type="reset" id="limpa" value="Limpar">
-				</div>
 
-			</form>
+				</div>
 
 				<h4 id="total"> </h4>
 
-				<h4 id="resposta"> </h4>
-
-				<h4 id="alerta"> </h4>
-
-				<h4 id="aviso"> </h4>
-
 				<h4 id="preco"> </h4>
 
-				<h4 id="final"> </h4>
+			</form>
 
 		</section>
 

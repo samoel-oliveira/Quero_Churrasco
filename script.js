@@ -1,54 +1,50 @@
 var total;
 
-function validaChurras() {
-	/*document..reset();*/
+function calcQuantPess() {
+
 	var quant = document.getElementById("quantidade").value;
 	total = quant*400;
+	document.getElementById("resposta").innerHTML="A quantidade de carne para seu churrasco poderá variar de "+(total-500)+
+	" a "+(total+500)+" gramas. Para que não haja desperdício nem falta de carne!";
+
+}
+
+function validaChurras() {
+	/*document..reset();*/
+
+		var g_linguica = parseInt(document.getElementById("linguica-gramas").value);
+
+		var g_contrafile = parseInt(document.getElementById("contrafile-gramas").value);
+
+		var g_picanha = parseInt(document.getElementById("picanha-gramas").value);
+
+		var g_maminha = parseInt(document.getElementById("maminha-gramas").value);
+
+		var g_soma = g_linguica+g_contrafile+g_picanha+g_maminha;
 
 
-	var g_linguica = parseInt(document.getElementById("linguica-gramas").value);
-	var r_linguica = parseFloat(document.getElementById("linguica-reais").value);
+		if((g_soma<(total-500))||(g_soma>(total+500))) {
 
-	var g_contrafile = parseInt(document.getElementById("contrafile-gramas").value);
-	var r_contrafile = parseFloat(document.getElementById("contrafile-reais").value);
+		document.getElementById("total").innerHTML="A quantidade de carne pedida foi de "+(g_soma)+" gramas ("+(((g_soma)/1000).toFixed(2))+" quilos). Essa quantidade está fora do intervalo estabelecido. Por isso haverá desperdício ou falta de carene!";
+		document.getElementById("preco").innerHTML=
+		"Caso queira pedir outro churrasco, preencha novamente a quantidade de gramas para cada tipo de carne, de forma que o total fique no intervalo estabelecido inicialmente!";
 
-	var g_picanha = parseInt(document.getElementById("picanha-gramas").value);
-	var r_picanha = parseFloat(document.getElementById("picanha-reais").value);
+		}
 
-	var g_maminha = parseInt(document.getElementById("maminha-gramas").value);
-	var r_maminha = parseFloat(document.getElementById("maminha-reais").value);
+		else if(total==g_soma) {
 
-	var g_soma = g_linguica+g_contrafile+g_picanha+g_maminha;
-	var r_soma = r_linguica+r_contrafile+r_picanha+r_maminha;
-
-	document.getElementById("total").innerHTML="O total de carne pedido foi de "+(g_soma)+" gramas.";
-
-	if((g_soma<(total-500))||(g_soma>(total+500))) {
-
-		document.getElementById("alerta").innerHTML="No seu caso a quantidade em gramas a ser escolhida, pode variar de "+(total-500)+" à "+
-		(total+500)+", mas o total de carne selecionado foi de "+(g_soma)+" gramas!";
-		document.getElementById("aviso").innerHTML=
-		"Por favor caso ainda queira o churrasco, preencha novamente a quantidade em gramas de cada tipo de carne, de forma que o total fique no intervalo estabelecido!";
-
-	}
-
-	else if(total==g_soma) {
-
+		document.getElementById("total").innerHTML="O total de carne pedido foi de "+(g_soma)+" gramas ("+(((g_soma)/1000).toFixed(2))+" quilos).";
 		document.getElementById("preco").innerHTML="O preço do seu churrasco foi de R$ "+(((g_linguica*0.02)+(g_contrafile*0.028)+(g_picanha*0.035)+
 		(g_maminha*0.027)).toFixed(2)+".");
-		document.getElementById("final").innerHTML="Muito obrigado(a) pela escolha, volte sempre!";
 
-	}
+		}
 
-	else if(total!=g_soma) {
+		else if(total!=g_soma) {
 
-		document.getElementById("resposta").innerHTML="A quantidade ideal de carne para seu churrasco é "+(total)+
-		" gramas, mas fique tranquilo(a), a quantidade pedida está dentro do esperado.";
+		document.getElementById("total").innerHTML="O total de carne pedido foi de "+(g_soma)+" gramas ("+(((g_soma)/1000).toFixed(2))+" quilos).";
 		document.getElementById("preco").innerHTML="O preço do seu churrasco foi de R$ "+(((g_linguica*0.02)+(g_contrafile*0.028)+(g_picanha*0.035)+
 		(g_maminha*0.027)).toFixed(2)+".");
-		document.getElementById("final").innerHTML="Muito obrigado(a) pela escolha, volte sempre!";
 
-
-	}
+	}	
 
 }
