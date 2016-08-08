@@ -9,6 +9,14 @@ function calcQuantPess() {
 
 }
 
+function limpar() {
+
+	document.getElementById("resposta").reset();
+	document.getElementById("total").reset();
+	document.getElementById("preco").reset();
+
+}
+
 function validaChurras() {
 	/*document..reset();*/
 

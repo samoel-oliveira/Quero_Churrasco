@@ -48,28 +48,16 @@
 			<p>
 			Primeiramente, quantas pessoas comerão carne?  
 			</p>
-<<<<<<< HEAD
-			
-			<form name="dadosPedido" action="pedido.html">
 
 				Quantidade: <input type="number" min="1" max="max" id="quantidade">
 
-					<br>
-=======
-
-				Quantidade: <input type="number" min="1" max="max" id="quantidade">
 				<button type="button" onclick="calcQuantPess()"> Enviar </button>
 
 				<h4 id="resposta"> </h4>
->>>>>>> origin/master
 
 			<p>
 			Informe a quantidade de gramas desejada, para cada uma das opções abaixo: <br>
-<<<<<<< HEAD
 			Obs.: 1000g = 1Kg
-=======
-			<b>Observação:</b> mil gramas são iguais a um kilograma!
->>>>>>> origin/master
 			</p>
 
 			<div align="center">
@@ -95,7 +83,7 @@
 						</td>
 
 						<td>
-						<input type="number" min="0" max="max" step="25" id="linguica-gramas"> <br>
+						<input type="number" min="100" max="max" step="25" id="linguica-gramas"> <br>
 						</td>
 
 					</tr>
@@ -108,7 +96,7 @@
 						</td>
 
 						<td>
-						<input type="number" min="0" max="max" step="25" id="contrafile-gramas"> <br>
+						<input type="number" min="100" max="max" step="25" id="contrafile-gramas"> <br>
 						</td>
 
 					</tr>
@@ -121,7 +109,7 @@
 						</td>
 
 						<td>
-						<input type="number" min="0" max="max" step="25" id="picanha-gramas"> <br>
+						<input type="number" min="100" max="max" step="25" id="picanha-gramas"> <br>
 						</td>
 
 					</tr>
@@ -134,7 +122,7 @@
 						</td>
 
 						<td>
-						<input type="number" min="0" max="max" step="25" id="maminha-gramas"> <br>
+						<input type="number" min="100" max="max" step="25" id="maminha-gramas"> <br>
 						</td>
 
 					</tr>
@@ -147,7 +135,11 @@
 						Enviar
 					</button>
 
-					<input type="reset" id="limpa" value="Limpar">
+					<button type="button" onclick="limpar()">
+						Limpar Saídas
+					</button>
+
+					<input type="reset" id="limpa" value="Limpar Entradas">
 
 				</div>
 
