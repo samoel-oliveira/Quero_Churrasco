@@ -29,6 +29,7 @@
 
 			</h3>
 			<h4> Fonte: Wikipédia </h4>
+
 		</nav>
 
 		<section>
@@ -42,20 +43,33 @@
 			</div>
 
 
+			<form name="dadosPedido" action="pedido.html">
+
 			<p>
 			Primeiramente, quantas pessoas comerão carne?  
 			</p>
+<<<<<<< HEAD
 			
 			<form name="dadosPedido" action="pedido.html">
 
 				Quantidade: <input type="number" min="1" max="max" id="quantidade">
 
 					<br>
+=======
 
-			
+				Quantidade: <input type="number" min="1" max="max" id="quantidade">
+				<button type="button" onclick="calcQuantPess()"> Enviar </button>
+
+				<h4 id="resposta"> </h4>
+>>>>>>> origin/master
+
 			<p>
 			Informe a quantidade de gramas desejada, para cada uma das opções abaixo: <br>
+<<<<<<< HEAD
 			Obs.: 1000g = 1Kg
+=======
+			<b>Observação:</b> mil gramas são iguais a um kilograma!
+>>>>>>> origin/master
 			</p>
 
 			<div align="center">
@@ -68,11 +82,7 @@
 						</th>
 
 						<th>
-						QUANTIDADE EM GRAMA(S)
-						</th>
-
-						<th>
-						VALOR EM REAL($)
+						QUANTIDADE EM GRAMAS
 						</th>
 
 					</tr>
@@ -88,10 +98,6 @@
 						<input type="number" min="0" max="max" step="25" id="linguica-gramas"> <br>
 						</td>
 
-						<td>
-						<input type="number" min="0" max="max" step="0.01" id="linguica-reais"> <br>
-						</td>
-
 					</tr>
 
 
@@ -102,7 +108,7 @@
 						</td>
 
 						<td>
-						<input type="number" min="0" max="max" step="25" id="contrafile"> <br>
+						<input type="number" min="0" max="max" step="25" id="contrafile-gramas"> <br>
 						</td>
 
 					</tr>
@@ -115,7 +121,7 @@
 						</td>
 
 						<td>
-						<input type="number" min="0" max="max" step="25" id="picanha"> <br>
+						<input type="number" min="0" max="max" step="25" id="picanha-gramas"> <br>
 						</td>
 
 					</tr>
@@ -128,7 +134,7 @@
 						</td>
 
 						<td>
-						<input type="number" min="0" max="max" step="25" id="maminha"> <br>
+						<input type="number" min="0" max="max" step="25" id="maminha-gramas"> <br>
 						</td>
 
 					</tr>
@@ -142,19 +148,12 @@
 					</button>
 
 					<input type="reset" id="limpa" value="Limpar">
-			</div>
+
+				</div>
 
 				<h4 id="total"> </h4>
 
-				<h4 id="resposta"> </h4>
-
-				<h4 id="alerta"> </h4>
-
-				<h4 id="aviso"> </h4>
-
 				<h4 id="preco"> </h4>
-
-				<h4 id="final"> </h4>
 
 			</form>
 
