@@ -38,13 +38,13 @@
 				<b>
 				<a href= "PaginaInicial.html">    | PÁGINA INCIAL | </a> 
 				<a href= "tabela.html">  TABELA DE PREÇOS    </a>  
-				<a href= "pedido.html">  | REALIZAR PEDIDO |  </a>  
+				<a href= "pedido.html">  | REALIZAR PEDIDO |  </a>
 				<a href= "pedido.html">   CADASTRE-SE |  </a> 				
 				</b>
 			</div>
 
 
-			<form name="dadosPedido" action="pedido.html">
+			<form name="dadosPedido" id="pedido" action="pedido.html">
 
 			<p>
 			Primeiramente, quantas pessoas comerão carne?  
@@ -127,6 +127,66 @@
 						</td>
 
 					</tr>
+
+					<tr>
+
+						<td>
+						CORAÇÃO DE GALINHA
+						</td>
+
+						<td>
+						<input type="number" min="100" max="max" step="25" id="coracao-gramas"> <br>
+						</td>
+
+					</tr>
+					
+					<tr>
+
+						<td>
+						CUPIM
+						</td>
+
+						<td>
+						<input type="number" min="100" max="max" step="25" id="cupim-gramas"> <br>
+						</td>
+
+					</tr>
+					
+					<tr>
+
+						<td>
+						GALETO ASSADO
+						</td>
+
+						<td>
+						<input type="number" min="100" max="max" step="25" id="galeto-gramas"> <br>
+						</td>
+
+					</tr>
+
+					<tr>
+
+						<td>
+						GALETO GRATINADO
+						</td>
+
+						<td>
+						<input type="number" min="100" max="max" step="25" id="gratinado-gramas"> <br>
+						</td>
+
+					</tr>
+					
+					<tr>
+
+						<td>
+						BISTECA SUÍNA
+						</td>
+
+						<td>
+						<input type="number" min="100" max="max" step="25" id="bisteca-gramas"> <br>
+						</td>
+
+					</tr>
 					
 				</table>
 					
@@ -136,11 +196,15 @@
 						Enviar
 					</button>
 
-					<button type="button" onclick="limpar()">
+					<button type="button" onclick="limparSaida()">
 						Limpar Saídas
 					</button>
 
-					<input type="reset" id="limpa" value="Limpar Entradas">
+					<button type="button" onclick="limparForm()">
+						Limpar Entradas
+					</button>
+
+					<!--<input type="reset" id="limpa" value="Limpar Entradas">-->
 
 				</div>
 

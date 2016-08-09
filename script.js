@@ -9,11 +9,16 @@ function calcQuantPess() {
 
 }
 
-function limpar() {
+function limparForm() {
+	
+	document.getElementById("pedido").reset();
+
+}
+
+function limparSaida() {
 
 	document.getElementById("resposta").reset();
-	document.getElementById("total").reset();
-	document.getElementById("preco").reset();
+	/*...*/
 
 }
 
@@ -28,7 +33,17 @@ function validaChurras() {
 
 		var g_maminha = parseInt(document.getElementById("maminha-gramas").value);
 
-		var g_soma = g_linguica+g_contrafile+g_picanha+g_maminha;
+		var g_coracao = parseInt(document.getElementById("coracao-gramas").value);
+
+		var g_cupim = parseInt(document.getElementById("cupim-gramas").value);
+
+		var g_galeto = parseInt(document.getElementById("galeto-gramas").value);
+
+		var g_gratinado = parseInt(document.getElementById("gratinado-gramas").value);
+
+		var g_bisteca = parseInt(document.getElementById("bisteca-gramas").value);
+
+		var g_soma = g_linguica+g_contrafile+g_picanha+g_maminha+g_coracao+g_cupim+g_galeto+g_gratinado+g_bisteca;
 
 
 		if((g_soma<(total-500))||(g_soma>(total+500))) {
