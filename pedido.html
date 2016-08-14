@@ -43,11 +43,12 @@
 				</b>
 			</div>
 
+			<div align="center">
 
 			<form name="dadosPedido" id="pedido" action="pedido.html">
 
 			<p>
-			Primeiramente, quantas pessoas comerão carne?  
+			Primeiramente, quantas pessoas comerão carne?
 			</p>
 
 				Quantidade: <input type="number" min="1" max="max" id="quantidade">
@@ -57,11 +58,10 @@
 				<h4 id="resposta"> </h4>
 
 			<p>
-			Informe a quantidade de gramas desejada, para cada uma das opções abaixo: <br>
-			Obs.: 1000g = 1Kg
+			Informe a quantidade de gramas desejada, para cada uma das carnes abaixo: <br>
+			<b>Observação: 1000 g = 1 kg</b>
 			</p>
 
-			<div align="center">
 				<table border="3">
 
 					<tr>
@@ -84,8 +84,10 @@
 						</td>
 
 						<td>
-						<input type="number" min="100" max="max" step="25" id="linguica-gramas"> <br>
-						</td>
+						<input type="range" value="0" min="0" max="10000" step="50" id="linguica-gramas" oninput="atualizaTextoLing(this.value)">
+  						<output id="rangeValueLing"></output> 
+  						<output id="simb-gramasLing"></output> <br>
+  						</td>
 
 					</tr>
 
@@ -97,8 +99,10 @@
 						</td>
 
 						<td>
-						<input type="number" min="100" max="max" step="25" id="contrafile-gramas"> <br>
-						</td>
+						<input type="range" value="0" min="0" max="10000" step="50" id="contrafile-gramas" oninput="atualizaTextoContr(this.value)">
+  						<output id="rangeValueContr"></output> 
+  						<output id="simb-gramasContr"></output> <br>
+  						</td>
 
 					</tr>
 
@@ -110,8 +114,10 @@
 						</td>
 
 						<td>
-						<input type="number" min="100" max="max" step="25" id="picanha-gramas"> <br>
-						</td>
+						<input type="range" value="0" min="0" max="10000" step="50" id="picanha-gramas" oninput="atualizaTextoPic(this.value)">
+  						<output id="rangeValuePic"></output> 
+  						<output id="simb-gramasPic"></output> <br>
+  						</td>
 
 					</tr>
 
@@ -123,8 +129,10 @@
 						</td>
 
 						<td>
-						<input type="number" min="100" max="max" step="25" id="maminha-gramas"> <br>
-						</td>
+						<input type="range" value="0" min="0" max="10000" step="50" id="maminha-gramas" oninput="atualizaTextoMam(this.value)">
+  						<output id="rangeValueMam"></output> 
+  						<output id="simb-gramasMam"></output> <br>
+  						</td>
 
 					</tr>
 
@@ -135,8 +143,10 @@
 						</td>
 
 						<td>
-						<input type="number" min="100" max="max" step="25" id="coracao-gramas"> <br>
-						</td>
+						<input type="range" value="0" min="0" max="10000" step="50" id="coracao-gramas" oninput="atualizaTextoCora(this.value)">
+  						<output id="rangeValueCora"></output> 
+  						<output id="simb-gramasCora"></output> <br>
+  						</td>
 
 					</tr>
 					
@@ -147,8 +157,10 @@
 						</td>
 
 						<td>
-						<input type="number" min="100" max="max" step="25" id="cupim-gramas"> <br>
-						</td>
+						<input type="range" value="0" min="0" max="10000" step="50" id="cupim-gramas" oninput="atualizaTextoCup(this.value)">
+  						<output id="rangeValueCup"></output> 
+  						<output id="simb-gramasCup"></output> <br>
+  						</td>
 
 					</tr>
 					
@@ -159,8 +171,10 @@
 						</td>
 
 						<td>
-						<input type="number" min="100" max="max" step="25" id="galeto-gramas"> <br>
-						</td>
+						<input type="range" value="0" min="0" max="10000" step="50" id="assado-gramas" oninput="atualizaTextoAssa(this.value)">
+  						<output id="rangeValueAssa"></output> 
+  						<output id="simb-gramasAssa"></output> <br>
+  						</td>
 
 					</tr>
 
@@ -171,8 +185,10 @@
 						</td>
 
 						<td>
-						<input type="number" min="100" max="max" step="25" id="gratinado-gramas"> <br>
-						</td>
+						<input type="range" value="0" min="0" max="10000" step="50" id="gratinado-gramas" oninput="atualizaTextoGrat(this.value)">
+  						<output id="rangeValueGrat"></output> 
+  						<output id="simb-gramasGrat"></output> <br>
+  						</td>
 
 					</tr>
 					
@@ -183,36 +199,36 @@
 						</td>
 
 						<td>
-						<input type="number" min="100" max="max" step="25" id="bisteca-gramas"> <br>
-						</td>
+						<input type="range" value="0" min="0" max="10000" step="50" id="bisteca-gramas" oninput="atualizaTextoBist(this.value)">
+  						<output id="rangeValueBist"></output> 
+  						<output id="simb-gramasBist"></output> <br>
+  						</td>
 
 					</tr>
 					
 				</table>
-					
+
 				<br>
 
 					<button type="button" onclick="validaChurras()">
-						Enviar
-					</button>
-
-					<button type="button" onclick="limparSaida()">
-						Limpar Saídas
+						Enviar Pedido
 					</button>
 
 					<button type="button" onclick="limparForm()">
 						Limpar Entradas
 					</button>
 
-					<!--<input type="reset" id="limpa" value="Limpar Entradas">-->
-
-				</div>
+					<button type="button" onclick="limparSaida()">
+						Limpar Saídas
+					</button>
 
 				<h4 id="total"> </h4>
 
 				<h4 id="preco"> </h4>
 
 			</form>
+
+			</div>
 
 		</section>
 
