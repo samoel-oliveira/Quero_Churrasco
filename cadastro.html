@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title> Cadastro </title>
+		<link rel="stylesheet" href="estilo.css">
+		<script type="text/javascript" src="script.js"> </script>
+	</head>
+
+	<body>
+
+		<header>
+
+			<img class="logo"src="queroChurrasco.jpg">
+			<h1> Quero Churrasco </h1>
+			<h3> Delivery </h3>
+
+		</header>
+		
+		<nav>
+
+			<h2><b> <i> <u> O que é Churrasco? <br> Como é feito?</u> </b> </i> </h2>
+			<h3>  Churrasco é o nome dado ao prato feito a base de carne <i> in natura </i> ou processada, assada sobre fogo ou brasas, 
+			com a utilização de estacas de madeira ou metal (chamados de espetos) ou de grelhas.
+			<br>
+			<br>
+
+			</h3>
+			<h4> Fonte: Wikipédia </h4>
+
+		</nav>
+
+		<section>
+
+			<div class="tag">
+				<b>
+				<a href= "PaginaInicial.html">  | HOMEPAGE | </a> 
+				<a href= "tabela.html">  PREÇOS    </a>  
+				<a href= "pedido.html">  | PEDIDO |  </a>
+				<a href= "cadastro.html">   CADASTRO |  </a> 				
+				</b>
+			</div>
+
+
+			<form name="dadosCadastro" id="cadastro" action="cadastro.html">
+
+				<div align="center">
+					<p>
+					Com cadastro de seus dados em nosso sistema, você terá desconto de 20% no valor total de seu pedido!
+					</p>
+
+					<h4> Preencha os campos abaixo: </h4>
+
+					Nome: <input type="text" id="nome" required> <br>
+					Sobrenome: <input type="text" id="sobrenome" required> <br>
+					Data de Nascimento: <input type="date" id="data" required> <br>
+					Endereço: <input type="text" id="endereco" required> <br>
+					Telefone: <input type="number" id="telefone" required> <br> <br>
+					
+					<button type="button" onclick="cadastroDados()"> Enviar </button>
+
+				</div>
+
+
+
+				<form name="dadosCadUsu" id="cad-usuario" action="cadastro.html">
+
+					<div align="center">
+
+					<p>
+					Com uma conta em nosso sistema, você terá desconto de 40% no valor total de seu pedido!
+					</p>
+
+					<h4> Forneça um usuário e uma senha nos campos abaixo: </h4>
+
+						Usuário: <input type="text" id="usuario" required> <br>
+						Senha: <input type="password" id="senha" required> <br>
+
+						<button type="button" onclick="cadastroUsuario()"> Enviar </button>
+
+					</div>
+
+				</form>
+
+					<!--Login
+				    <div id="login-header">
+				      Faça login no sistema
+				    </div>
+
+				    <div id="login-inputs">
+				      <input type="text" placeholder="Nome de usuário" name="usuario"> <br>
+				      <input type="password" placeholder="Senha" name="senha">
+				    </div>
+
+				    <div id="enviar">
+				      <input type="button" onclick="Login()" value="Login">
+				    </div>
+				    -->
+
+			</form>
+
+		</section>
+
+		<footer>
+
+			<h5>
+				WEBSITE DESENVOLVIDO POR DIOGO KERMES E SAMOEL OLIVEIRA <br> 
+				DISCENTES DO 4º ANO MÉDIO TÉCNICO EM INFORMÁTICA NO IFAL - CAMPUS ARAPIRACA
+			</h5>
+
+		</footer>
+
+	</body>
+
+</html>
