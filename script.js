@@ -76,6 +76,12 @@ function limparForm() {
 
 }
 
+function limparCadastro() {
+
+	document.getElementById("cadastro").reset();
+
+}
+
 function limparSaida() {
 
 	document.getElementById("resposta").innerHTML="";
@@ -88,28 +94,27 @@ function limparSaida() {
 /*Inicializando variáveis para puder realizar comparação*/
 var nome="";
 var sobrenome="";
-var idade=-1;
+var dataNasc=-1;
+var endereco="";
+var telefone=-1;
 
 function cadastroDados() {
 
 	 nome = document.getElementById("nome").value;
 	 sobrenome = document.getElementById("sobrenome").value;
-	 idade = parseInt(document.getElementById("idade").value);
+	 dataNasc = parseInt(document.getElementById("data").value);
+	 endereco = document.getElementById("endereco").value;
+	 telefone = parseInt(document.getElementById("telefone").value);
 
-	 if((nome!="")&&(sobrenome!="")&&(idade>-1)) {
+
+	 if((nome!="")&&(sobrenome!="")&&(dataNasc>-1)&&(endereco!="")&&(telefone>-1)) {
 	 	alert("Cliente cadastrado com sucesso!");
-	 	/*window.location.href="pedido.html";*/
+	 	window.location.href="pedido.html";
 	 }
 	 else {
 	 	alert("Cliente não foi cadastrado"+"\nNão foram preenchidos todos os campos!");
 	 }
 
-}
-
-function cadastroUsuario() {
-
-	
-	
 }
 
 function validaChurras() {
@@ -144,21 +149,23 @@ function validaChurras() {
 
 		}
 
-		else if((total==g_soma)&&(nome!="")&&(sobrenome!="")&&(idade>-1)) {
+		else if((total==g_soma)&&(nome!="")&&(sobrenome!="")&&(dataNasc>-1)&&(endereco!="")&&(telefone>-1)) {
 
 		document.getElementById("total").innerHTML="O total de carne pedido foi de "+(g_soma)+" g ("+(((g_soma)/1000).toFixed(1))+" kg).";
 		document.getElementById("promocao").innerHTML="Você foi agraciado(a) com uma promoção de 20% de desconto, APROVEITE!";
 		document.getElementById("preco").innerHTML="O preço do seu churrasco foi de R$ "+((((g_linguica*0.02)+(g_contrafile*0.028)+(g_picanha*0.035)+
 		(g_maminha*0.027)+(g_coracao*0.018)+(g_cupim*0.032)+(g_assado*0.022)+(g_gratinado*0.025)+(g_bisteca*0.032))*0.8).toFixed(2)+" .");
+		document.getElementById("obrigado").innerHTML="Obrigado(a) pelo pedido, volte sempre!";
 
 		}
 
-		else if((total!=g_soma)&&(nome!="")&&(sobrenome!="")&&(idade>-1)) {
+		else if((total!=g_soma)&&(nome!="")&&(sobrenome!="")&&(dataNasc>-1)&&(endereco!="")&&(telefone>-1)) {
 
 		document.getElementById("total").innerHTML="O total de carne pedido foi de "+(g_soma)+" g ("+(((g_soma)/1000).toFixed(1))+" kg).";
 		document.getElementById("promocao").innerHTML="Você foi agraciado(a) com uma promoção de 20% de desconto, APROVEITE!";
 		document.getElementById("preco").innerHTML="O preço do seu churrasco foi de R$ "+((((g_linguica*0.02)+(g_contrafile*0.028)+(g_picanha*0.035)+
 		(g_maminha*0.027)+(g_coracao*0.018)+(g_cupim*0.032)+(g_assado*0.022)+(g_gratinado*0.025)+(g_bisteca*0.032))*0.8).toFixed(2)+" .");
+		document.getElementById("obrigado").innerHTML="Obrigado(a) pelo pedido, volte sempre!";
 
 		}
 
@@ -167,6 +174,7 @@ function validaChurras() {
 		document.getElementById("total").innerHTML="O total de carne pedido foi de "+(g_soma)+" g ("+(((g_soma)/1000).toFixed(1))+" kg).";
 		document.getElementById("preco").innerHTML="O preço do seu churrasco foi de R$ "+(((g_linguica*0.02)+(g_contrafile*0.028)+(g_picanha*0.035)+
 		(g_maminha*0.027)+(g_coracao*0.018)+(g_cupim*0.032)+(g_assado*0.022)+(g_gratinado*0.025)+(g_bisteca*0.032)).toFixed(2)+" .");
+		document.getElementById("obrigado").innerHTML="Obrigado(a) pelo pedido, volte sempre!";
 
 		}
 
@@ -175,6 +183,7 @@ function validaChurras() {
 		document.getElementById("total").innerHTML="O total de carne pedido foi de "+(g_soma)+" g ("+(((g_soma)/1000).toFixed(1))+" kg).";
 		document.getElementById("preco").innerHTML="O preço do seu churrasco foi de R$ "+(((g_linguica*0.02)+(g_contrafile*0.028)+(g_picanha*0.035)+
 		(g_maminha*0.027)+(g_coracao*0.018)+(g_cupim*0.032)+(g_assado*0.022)+(g_gratinado*0.025)+(g_bisteca*0.032)).toFixed(2)+" .");
+		document.getElementById("obrigado").innerHTML="Obrigado(a) pelo pedido, volte sempre!";
 
 	}	
 
